@@ -1,6 +1,162 @@
-/******* Change Box Model ***************/
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('/images/site/checkerboard.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #333;
+}
+
+#top-header {
+  background-color: rgba(0, 86, 179, 0.8);
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.siteName a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+#tools a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+nav {
+  background-color: rgba(0, 123, 255, 0.8);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  color: white;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  background-color: rgba(0, 86, 179, 0.8);
+}
+
+.container {
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+}
+
+.hero {
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  margin: 20px 0;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  padding: 15px;
+}
+
+.card h2 {
+  margin: 0 0 10px 0;
+}
+
+.card p {
+  margin: 5px 0;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.upgrades {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.upgrade-item {
+  background-color: #eaeaea;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px;
+  width: 120px;
+  text-align: center;
+}
+
+.upgrade-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: rgba(0, 86, 179, 0.8);
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.copyright {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .container {
+      max-width: 800px;
+      margin: auto;
+  }
+
+  nav ul {
+      justify-content: space-around;
+  }
+
+  .upgrade-item {
+      width: 150px;
+  }
+
+  .hero img {
+      max-width: 90%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #top-header {
+      padding: 20px 40px;
+  }
+
+  nav ul li {
+      padding: 20px 30px;
+  }
+
+  .card {
+      padding: 20px;
+  }
 }
