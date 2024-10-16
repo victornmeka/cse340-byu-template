@@ -1,36 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Vollkorn','Roboto Flex', sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('/images/site/checkerboard.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #333;
 }
-
+h1, h2, h3 {
+  font-family: 'Vollkorn', sans-serif;
+}
+p{
+  font-family: 'Roboto Flex', sans-serif;
+}
 #top-header {
-  background-color: rgba(0, 86, 179, 0.8);
-  color: white;
-  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding: 30px;
 }
 
 .siteName a {
-  color: white;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #2C2C2C;
+  margin-left: 15px;
 }
 
 #tools a {
-  color: white;
   text-decoration: none;
-  padding: 5px 10px;
+  color: #2C2C2C;
+  margin-right: 15px;
 }
 
 nav {
-  background-color: rgba(0, 123, 255, 0.8);
+  background-color: #2C2C2C;
+  padding: 25px;
+  font-size: 24px;
+  margin-left: 45px;
+  margin-right: 45px;
 }
 
 nav ul {
@@ -39,101 +44,146 @@ nav ul {
   margin: 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 nav ul li {
   color: white;
-  padding: 15px 20px;
+  padding: 10px;
   cursor: pointer;
+  flex: 1;
+  text-align: center;
 }
 
 nav ul li:hover {
-  background-color: rgba(0, 86, 179, 0.8);
+  background-color: white;
+  color: #2C2C2C;
 }
 
 .container {
-  padding: 20px;
-  text-align: center;
+  padding: 15px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
+  margin: 30px; 
 }
 
 .hero {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.hero h1 {
-  margin: 20px 0;
+.container h1 {
+  padding: 20px;
+  font-size: 35px; 
 }
 
 .hero img {
+  
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
 }
 
 .card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin: 20px 0;
-  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 10px 0;
+  padding: 10px;
+  position: absolute;
+  bottom: 5px;
 }
 
 .card h2 {
-  margin: 0 0 10px 0;
+  margin: 0 0 5px 0;
+  font-size: 22px; 
+  font-weight: bold;
+  color: #20C997;
+
 }
 
 .card p {
   margin: 5px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #20C997;
+
 }
 
 .card a {
   display: inline-block;
   margin-top: 10px;
 }
-
+.review-list{
+  line-height: 4.2vw;
+  font-size: medium;
+}
+.upgrades-container{
+  margin-top: 40px;
+}
+.upgrades-container h2{
+  margin-bottom: 0px;
+}
 .upgrades {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+  margin-top: 0px; 
 }
 
-.upgrade-item {
-  background-color: #eaeaea;
+.upgrades img{
+  background-color: #20C997;
   border-radius: 8px;
-  margin: 10px;
-  padding: 15px;
-  width: 120px;
+  padding: 10px 60px 10px 60px;
+  width: 50%; 
   text-align: center;
 }
 
-.upgrade-item img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+
+.upgrade-item  {
+  text-align: center;
+  gap: 20px;
+  margin: 20px;
 }
+
+
 
 footer {
-  text-align: center;
-  padding: 10px 0;
-  background-color: rgba(0, 86, 179, 0.8);
-  color: white;
+  
+  padding: 15px;
   position: relative;
   bottom: 0;
-  width: 100%;
+  margin-left: 45px;
+ 
 }
 
 .copyright {
   margin: 0;
 }
 
-@media (min-width: 768px) {
-  .container {
-      max-width: 800px;
+
+
+@media (min-width: 801px){
+  body{
+    background-image: url('/images/site/small_check.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  #wrapper{
+      background-color: white;
+      max-width: 90%;
       margin: auto;
+      margin-top: 25px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border-style: solid;
+      border-color: #20C997;
   }
 
+  nav {
+    margin: 20px;
+  }
   nav ul {
       justify-content: space-around;
   }
@@ -141,22 +191,31 @@ footer {
   .upgrade-item {
       width: 150px;
   }
-
-  .hero img {
-      max-width: 90%;
+  .container h1 {
+    font-size: 3rem; 
   }
-}
-
-@media (min-width: 1200px) {
-  #top-header {
-      padding: 20px 40px;
+  .hero .delorean-car {
+      display: block;
+      margin-left: 30%;
+      max-width: 100%;
   }
-
-  nav ul li {
-      padding: 20px 30px;
-  }
-
   .card {
-      padding: 20px;
+    top: 15px;
+    margin-left: 20%;
+    line-height: 1.8rem;
   }
+  .revgrade-container{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+  }
+  .upgrades-container{
+    order: -1;
+  }
+  .review-card{
+    margin-top: 40px;
+  }
+ 
 }
+
+
